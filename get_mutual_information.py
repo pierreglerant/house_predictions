@@ -29,4 +29,10 @@ def getMIScores(X:pd.DataFrame,y:pd.Series,discreateFeatures:pd.Series) -> pd.Se
     return miScores.sort_values(ascending=False)
 
 def plotMIBar(miScores:pd.Series,miScoresIndex:list):
+    """ Make a bar plot with mutual information scores
+
+    Args :
+        -   miScores (pd.Series) : mutual information scores between x and every columns of X
+        -   miScoresIndex (list) : index of ploted mutual information 
+    """
     raise NotImplementedError
