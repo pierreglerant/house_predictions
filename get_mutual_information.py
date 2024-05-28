@@ -18,7 +18,15 @@ def getMIScores(X:pd.DataFrame,y:pd.Series,discreateFeatures:pd.Series) -> pd.Se
     Returns:
         pd.Series : mutual information scores between y and every columns of X
     """
-    raise NotImplementedError
+    
+    # Get a list of mutual information scores between y and every columns of y 
+    miScores = mutual_info_regression(X,y,discrete_features=discreateFeatures)
+
+    # Transform the list into a pd serie
+    miScores = pd.Series(miScores,name= 'MI Scores',index=X.columns)
+
+    # Return miScores sorted (desc)
+    return miScores.sort_values(ascending=False)
 
 def plotMIBar(miScores:pd.Series,miScoresIndex:list):
     raise NotImplementedError
