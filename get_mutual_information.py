@@ -37,11 +37,14 @@ def plotMIBar(miScores:pd.Series,miScoresIndex:list=None):
         -   miScores (pd.Series) : mutual information scores sorted (desc) between x and every columns of X
         -   miScoresIndex (list) : index of ploted mutual information (optional)
     """
-
+    
     # Select the MI scores indicated by miScoresIndex (if the list has been defined)
     if miScoresIndex != None:
         miScores = miScores[miScoresIndex]
-
+    
+    # Sort miScores (asc)
+    miScores = miScores.sort_values(ascending=True)
+    
     # Define a figure
     plt.figure()
 
