@@ -40,4 +40,10 @@ def encodeCategoricalValues(df:pd.DataFrame) -> pd.DataFrame:
     Returns :
         pd.DataFrame : df with categorical values encoded
     """
-    raise NotImplementedError
+
+    # Encode for categorical values 
+    for colName in df.select_dtypes('object'):
+        df[colName],_ = df[colName].factorize()
+    
+    # Return df with categorical values encoded
+    return df
