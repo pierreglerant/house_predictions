@@ -46,7 +46,7 @@ def plotMIBar(miScores:pd.Series,miScoresIndex:list=None):
     miScores = miScores.sort_values(ascending=True)
 
     # Define a figure
-    plt.figure()
+    plt.figure(figsize=(10,5))
 
     # Create an array of values from 0 to the length of miScores - 1
     # This will serve as the positions for the bars on the y-axis
