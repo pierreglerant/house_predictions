@@ -32,7 +32,7 @@ def plotMIBar(miScores:pd.Series,miScoresIndex:list):
     """ Make a bar plot with mutual information scores
 
     Args :
-        -   miScores (pd.Series) : mutual information scores between x and every columns of X
+        -   miScores (pd.Series) : mutual information scores sorted (desc) between x and every columns of X
         -   miScoresIndex (list) : index of ploted mutual information 
     """
     raise NotImplementedError
