@@ -60,4 +60,12 @@ def preprocessData(df:pd.DataFrame) -> pd.DataFrame:
     Returns :
         pd.DataFrame : preprocessed df
     """
-    raise NotImplementedError
+    
+    # Replace missing values
+    df = replaceMissingValues(df)
+
+    # Encode categorical values
+    df = encodeCategoricalValues(df)
+
+    # Return preprocessed df
+    return df
