@@ -17,4 +17,16 @@ def replaceMissingValues(df:pd.DataFrame) -> pd.DataFrame:
     Returns :
         pd.DataFrame : df with missing values replaced by 0 or None
     """
-    raise NotImplementedError
+    
+    # First case
+    # Replace every number type missing values by 0
+    for name in df.select_dtypes("number"):
+        df[name] = df[name].fillna(0)
+    
+    # Second case
+    # Replace every category type missing values by None
+    for name in df.select_dtypes("category"):
+        df[name] = df[name].fillna("None")
+    
+    # Return the df with no missing values
+    return df
