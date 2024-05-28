@@ -47,3 +47,17 @@ def encodeCategoricalValues(df:pd.DataFrame) -> pd.DataFrame:
     
     # Return df with categorical values encoded
     return df
+
+def preprocessData(df:pd.DataFrame) -> pd.DataFrame:
+    """Preprocess the dataFrame df
+    
+    First step  : replace missing values
+    Second step : encode categorical values
+
+    Args : 
+        df (pd.DataFrame) : treated DataFrame
+    
+    Returns :
+        pd.DataFrame : preprocessed df
+    """
+    raise NotImplementedError
