@@ -30,3 +30,14 @@ def replaceMissingValues(df:pd.DataFrame) -> pd.DataFrame:
     
     # Return the df with no missing values
     return df
+
+def encodeCategoricalValues(df:pd.DataFrame) -> pd.DataFrame:
+    """Encode categorical values in the DataFrame df
+
+    Args : 
+        df (pd.DataFrame) : treated DataFrame
+
+    Returns :
+        pd.DataFrame : df with categorical values encoded
+    """
+    raise NotImplementedError
