@@ -17,7 +17,7 @@ def getMIScores(X:pd.DataFrame,y:pd.Series,discreateFeatures:pd.Series) -> pd.Se
         -   discreateFeatures (pd.Series) : series with X's columns as index composed of booleans
                                            (X.columnName.dtype == int)
     
-    Returns:
+    Returns :
         pd.Series : mutual information scores between y and every columns of X
     """
     
@@ -44,7 +44,7 @@ def plotMIBar(miScores:pd.Series,miScoresIndex:list=None):
     
     # Sort miScores (asc)
     miScores = miScores.sort_values(ascending=True)
-    
+
     # Define a figure
     plt.figure()
 
